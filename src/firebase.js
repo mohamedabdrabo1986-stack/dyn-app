@@ -1,13 +1,11 @@
-// Import the functions you need from the SDKs you need
+// Firebase setup
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// بيانات تجريبية (dummy) لحد ما تحط بتوعك من Firebase Console
 const firebaseConfig = {
-  apiKey: "AIzaSyBC-tz3spH4nDdd4C4G-hOEfrbwH8fL8e4",
+   apiKey: "AIzaSyBC-tz3spH4nDdd4C4G-hOEfrbwH8fL8e4",
   authDomain: "kitchen-new-app.firebaseapp.com",
   projectId: "kitchen-new-app",
   storageBucket: "kitchen-new-app.firebasestorage.app",
@@ -16,6 +14,9 @@ const firebaseConfig = {
   measurementId: "G-5SHK4W9GDG"
 };
 
-// Initialize Firebase
+// initialize
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// database + auth
+export const db = getFirestore(app);
+export const auth = getAuth(app);
