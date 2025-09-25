@@ -1,11 +1,11 @@
-// Firebase setup
+// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// بيانات تجريبية (dummy) لحد ما تحط بتوعك من Firebase Console
+// ✅ بياناتك من Firebase Console
 const firebaseConfig = {
-   apiKey: "AIzaSyBC-tz3spH4nDdd4C4G-hOEfrbwH8fL8e4",
+  apiKey: "AIzaSyBC-tz3spH4nDdd4C4G-hOEfrbwH8fL8e4",
   authDomain: "kitchen-new-app.firebaseapp.com",
   projectId: "kitchen-new-app",
   storageBucket: "kitchen-new-app.firebasestorage.app",
@@ -14,9 +14,9 @@ const firebaseConfig = {
   measurementId: "G-5SHK4W9GDG"
 };
 
-// initialize
+// ✅ Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// database + auth
+// ✅ Database + Auth
 export const db = getFirestore(app);
 export const auth = getAuth(app);
